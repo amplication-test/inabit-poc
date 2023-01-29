@@ -14,10 +14,3 @@ export class NotFoundException extends common.NotFoundException {
   @ApiProperty()
   message!: string;
 }
-
-export class CustomError extends common.NotFoundException {
-  @ApiProperty()
-  statusCode!: number;
-  @ApiProperty()
-  message!: string;
-}
