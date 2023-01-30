@@ -1,7 +1,7 @@
 import { Customer } from "../customer/Customer";
 
 export type Address = {
-  id: string;
+  id: number;
   createdAt: Date;
   updatedAt: Date;
   address_1: string | null;
