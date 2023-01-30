@@ -41,7 +41,7 @@ model Customer {
   phone     String?
   orders    Order[]
   address   Address? @relation(fields: [addressId], references: [id])
-  addressId String?
+  addressId Int?
 }
 
 model Address {
