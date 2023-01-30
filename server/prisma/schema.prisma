@@ -41,11 +41,11 @@ model Customer {
   phone     String?
   orders    Order[]
   address   Address? @relation(fields: [addressId], references: [id])
-  addressId String?
+  addressId Int?
 }
 
 model Address {
-  id        String     @id @default(cuid())
+  id        Int        @id @default(autoincrement())
   createdAt DateTime   @default(now())
   updatedAt DateTime   @updatedAt
   address_1 String?
