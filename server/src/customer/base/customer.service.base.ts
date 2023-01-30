@@ -48,7 +48,7 @@ export class CustomerServiceBase {
   }
 
   async findOrders(
-    parentId: string,
+    parentId: number,
     args: Prisma.OrderFindManyArgs
   ): Promise<Order[]> {
     return this.prisma.customer
@@ -58,7 +58,7 @@ export class CustomerServiceBase {
       .orders(args);
   }
 
-  async getAddress(parentId: string): Promise<Address | null> {
+  async getAddress(parentId: number): Promise<Address | null> {
     return this.prisma.customer
       .findUnique({
         where: { id: parentId },
