@@ -1,5 +1,5 @@
 datasource postgres {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DB_URL")
 }
 
@@ -45,7 +45,7 @@ model Customer {
 }
 
 model Address {
-  id        Int        @id @default(autoincrement())
+  id        String     @id @default(uuid())
   createdAt DateTime   @default(now())
   updatedAt DateTime   @updatedAt
   address_1 String?
