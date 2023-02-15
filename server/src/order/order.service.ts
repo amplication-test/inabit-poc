@@ -7,4 +7,7 @@ export class OrderService extends OrderServiceBase {
   constructor(protected readonly prisma: PrismaService) {
     super(prisma);
   }
+  addLog() {
+    console.log("sdaf");
+  }
 }
