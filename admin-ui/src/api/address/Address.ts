@@ -1,7 +1,6 @@
 import { Customer } from "../customer/Customer";
 
 export type Address = {
-  ofek: string | null;
   createdAt: Date;
   updatedAt: Date;
   address_1: string | null;

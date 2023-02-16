@@ -4,7 +4,6 @@ import { CustomerListRelationFilter } from "../customer/CustomerListRelationFilt
 import { IntFilter } from "../../util/IntFilter";
 
 export type AddressWhereInput = {
-  ofek?: StringNullableFilter;
   address_1?: StringNullableFilter;
   address_2?: StringNullableFilter;
   city?: StringNullableFilter;

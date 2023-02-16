@@ -45,7 +45,6 @@ model Customer {
 }
 
 model Address {
-  ofek      String?
   createdAt DateTime   @default(now())
   updatedAt DateTime   @updatedAt
   address_1 String?

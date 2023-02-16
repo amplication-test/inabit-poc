@@ -51,7 +51,6 @@ export class AddressControllerBase {
     return await this.service.create({
       data: data,
       select: {
-        ofek: true,
         createdAt: true,
         updatedAt: true,
         address_1: true,
@@ -79,7 +78,6 @@ export class AddressControllerBase {
     return this.service.findMany({
       ...args,
       select: {
-        ofek: true,
         createdAt: true,
         updatedAt: true,
         address_1: true,
@@ -108,7 +106,6 @@ export class AddressControllerBase {
     const result = await this.service.findOne({
       where: params,
       select: {
-        ofek: true,
         createdAt: true,
         updatedAt: true,
         address_1: true,
@@ -146,7 +143,6 @@ export class AddressControllerBase {
         where: params,
         data: data,
         select: {
-          ofek: true,
           createdAt: true,
           updatedAt: true,
           address_1: true,
@@ -183,7 +179,6 @@ export class AddressControllerBase {
       return await this.service.delete({
         where: params,
         select: {
-          ofek: true,
           createdAt: true,
           updatedAt: true,
           address_1: true,
