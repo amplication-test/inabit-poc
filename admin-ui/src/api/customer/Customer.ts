@@ -2,7 +2,7 @@ import { Order } from "../order/Order";
 import { Address } from "../address/Address";
 
 export type Customer = {
-  id: number;
+  id: string;
   createdAt: Date;
   updatedAt: Date;
   firstName: string | null;

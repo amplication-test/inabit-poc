@@ -1,10 +1,10 @@
-import { IntFilter } from "../../util/IntFilter";
+import { StringFilter } from "../../util/StringFilter";
 import { StringNullableFilter } from "../../util/StringNullableFilter";
 import { OrderListRelationFilter } from "../order/OrderListRelationFilter";
 import { AddressWhereUniqueInput } from "../address/AddressWhereUniqueInput";
 
 export type CustomerWhereInput = {
-  id?: IntFilter;
+  id?: StringFilter;
   firstName?: StringNullableFilter;
   lastName?: StringNullableFilter;
   email?: StringNullableFilter;
