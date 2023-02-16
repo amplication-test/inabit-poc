@@ -12,10 +12,10 @@ https://docs.amplication.com/how-to/custom-code
 import { ObjectType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
 import {
-  IsInt,
-  IsDate,
   IsString,
   IsOptional,
+  IsDate,
+  IsInt,
   ValidateNested,
 } from "class-validator";
 import { Type } from "class-transformer";
@@ -24,12 +24,15 @@ import { Customer } from "../../customer/base/Customer";
 @ObjectType()
 class Address {
   @ApiProperty({
-    required: true,
-    type: Number,
+    required: false,
+    type: String,
   })
-  @IsInt()
-  @Field(() => Number)
-  id!: number;
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  ofek!: string | null;
 
   @ApiProperty({
     required: true,
@@ -110,6 +113,14 @@ class Address {
   @Type(() => Customer)
   @IsOptional()
   customers?: Array<Customer>;
+
+  @ApiProperty({
+    required: true,
+    type: Number,
+  })
+  @IsInt()
+  @Field(() => Number)
+  id!: number;
 }
 
 export { Address };

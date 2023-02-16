@@ -25,7 +25,7 @@ class AddressOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
-  id?: SortOrder;
+  ofek?: SortOrder;
 
   @ApiProperty({
     required: false,
@@ -89,6 +89,15 @@ class AddressOrderByInput {
     nullable: true,
   })
   zip?: SortOrder;
+
+  @ApiProperty({
+    required: false,
+    enum: ["asc", "desc"],
+  })
+  @Field(() => SortOrder, {
+    nullable: true,
+  })
+  id?: SortOrder;
 }
 
 export { AddressOrderByInput };

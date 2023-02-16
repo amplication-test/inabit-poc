@@ -26,6 +26,17 @@ class AddressCreateInput {
   @Field(() => String, {
     nullable: true,
   })
+  ofek?: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
   address_1?: string | null;
 
   @ApiProperty({

@@ -12,7 +12,7 @@ export const AddressList = (props: ListProps): React.ReactElement => {
       pagination={<Pagination />}
     >
       <Datagrid rowClick="show">
-        <TextField label="ID" source="id" />
+        <TextField label="Ofek" source="ofek" />
         <DateField source="createdAt" label="Created At" />
         <DateField source="updatedAt" label="Updated At" />
         <TextField label="Address 1" source="address_1" />
@@ -20,6 +20,7 @@ export const AddressList = (props: ListProps): React.ReactElement => {
         <TextField label="City" source="city" />
         <TextField label="State" source="state" />
         <TextField label="Zip" source="zip" />
+        <TextField label="ID" source="id" />
       </Datagrid>
     </List>
   );

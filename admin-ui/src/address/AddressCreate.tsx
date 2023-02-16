@@ -16,6 +16,7 @@ export const AddressCreate = (props: CreateProps): React.ReactElement => {
   return (
     <Create {...props}>
       <SimpleForm>
+        <TextInput label="Ofek" source="ofek" />
         <TextInput label="Address 1" source="address_1" />
         <TextInput label="Address 2" source="address_2" />
         <TextInput label="City" source="city" />
