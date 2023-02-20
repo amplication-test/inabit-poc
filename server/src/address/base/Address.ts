@@ -112,4 +112,4 @@ class Address {
   id!: number;
 }
 
-export { Address };
+export { Address as Address };

@@ -99,4 +99,4 @@ class AddressWhereInput {
   id?: IntFilter;
 }
 
-export { AddressWhereInput };
+export { AddressWhereInput as AddressWhereInput };

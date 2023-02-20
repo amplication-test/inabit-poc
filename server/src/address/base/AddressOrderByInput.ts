@@ -91,4 +91,4 @@ class AddressOrderByInput {
   id?: SortOrder;
 }
 
-export { AddressOrderByInput };
+export { AddressOrderByInput as AddressOrderByInput };
