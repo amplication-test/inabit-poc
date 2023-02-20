@@ -1,0 +1,16 @@
+diff a/server/src/address/base/Address.ts b/server/src/address/base/Address.ts	(rejected hunks)
+@@ -102,14 +110,6 @@ class Address {
+   @Type(() => Customer)
+   @IsOptional()
+   customers?: Array<Customer>;
+-
+-  @ApiProperty({
+-    required: true,
+-    type: Number,
+-  })
+-  @IsInt()
+-  @Field(() => Number)
+-  id!: number;
+ }
+ 
+ export { Address };

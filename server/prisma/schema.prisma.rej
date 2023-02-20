@@ -1,0 +1,17 @@
+diff a/server/prisma/schema.prisma b/server/prisma/schema.prisma	(rejected hunks)
+@@ -26,13 +26,13 @@ model Order {
+   discount   Float?
+   totalPrice Int?
+   customer   Customer? @relation(fields: [customerId], references: [id])
+-  customerId Int?
++  customerId String?
+   product    Product?  @relation(fields: [productId], references: [id])
+   productId  String?
+ }
+ 
+ model Customer {
+-  id        Int      @id @default(autoincrement())
++  id        String   @id @default(cuid())
+   createdAt DateTime @default(now())
+   updatedAt DateTime @updatedAt
+   firstName String?

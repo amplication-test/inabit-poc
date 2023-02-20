@@ -1,5 +1,5 @@
 datasource postgres {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DB_URL")
 }
 
@@ -46,6 +46,7 @@ model Customer {
 }
 
 model Address {
+  id        String     @id @default(uuid())
   createdAt DateTime   @default(now())
   updatedAt DateTime   @updatedAt
   address_1 String?
@@ -54,7 +55,6 @@ model Address {
   state     String?
   zip       Int?
   customers Customer[]
-  id        Int        @id @default(autoincrement())
 }
 
 model Product {

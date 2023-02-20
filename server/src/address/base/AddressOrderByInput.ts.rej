@@ -1,0 +1,10 @@
+diff a/server/src/address/base/AddressOrderByInput.ts b/server/src/address/base/AddressOrderByInput.ts	(rejected hunks)
+@@ -88,7 +88,7 @@ class AddressOrderByInput {
+   @Field(() => SortOrder, {
+     nullable: true,
+   })
+-  id?: SortOrder;
++  zip?: SortOrder;
+ }
+ 
+ export { AddressOrderByInput };

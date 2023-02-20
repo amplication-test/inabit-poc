@@ -35,6 +35,7 @@ export class AddressControllerBase {
     return await this.service.create({
       data: data,
       select: {
+        id: true,
         createdAt: true,
         updatedAt: true,
         address_1: true,
@@ -42,7 +43,6 @@ export class AddressControllerBase {
         city: true,
         state: true,
         zip: true,
-        id: true,
       },
     });
   }
@@ -55,6 +55,7 @@ export class AddressControllerBase {
     return this.service.findMany({
       ...args,
       select: {
+        id: true,
         createdAt: true,
         updatedAt: true,
         address_1: true,
@@ -62,7 +63,6 @@ export class AddressControllerBase {
         city: true,
         state: true,
         zip: true,
-        id: true,
       },
     });
   }
@@ -76,6 +76,7 @@ export class AddressControllerBase {
     const result = await this.service.findOne({
       where: params,
       select: {
+        id: true,
         createdAt: true,
         updatedAt: true,
         address_1: true,
@@ -83,7 +84,6 @@ export class AddressControllerBase {
         city: true,
         state: true,
         zip: true,
-        id: true,
       },
     });
     if (result === null) {
@@ -106,6 +106,7 @@ export class AddressControllerBase {
         where: params,
         data: data,
         select: {
+          id: true,
           createdAt: true,
           updatedAt: true,
           address_1: true,
@@ -113,7 +114,6 @@ export class AddressControllerBase {
           city: true,
           state: true,
           zip: true,
-          id: true,
         },
       });
     } catch (error) {
@@ -136,6 +136,7 @@ export class AddressControllerBase {
       return await this.service.delete({
         where: params,
         select: {
+          id: true,
           createdAt: true,
           updatedAt: true,
           address_1: true,
@@ -143,7 +144,6 @@ export class AddressControllerBase {
           city: true,
           state: true,
           zip: true,
-          id: true,
         },
       });
     } catch (error) {
