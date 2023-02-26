@@ -5,5 +5,4 @@ export type ProductCreateInput = {
   itemPrice?: number | null;
   description?: string | null;
   orders?: OrderCreateNestedManyWithoutProductsInput;
-  ofek?: string | null;
 };

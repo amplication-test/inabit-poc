@@ -9,5 +9,4 @@ export type ProductWhereInput = {
   itemPrice?: FloatNullableFilter;
   description?: StringNullableFilter;
   orders?: OrderListRelationFilter;
-  ofek?: StringNullableFilter;
 };

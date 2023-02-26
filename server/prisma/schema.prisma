@@ -64,5 +64,4 @@ model Product {
   itemPrice   Float?
   description String?
   orders      Order[]
-  ofek        String?
 }

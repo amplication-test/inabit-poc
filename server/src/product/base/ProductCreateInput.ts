@@ -66,17 +66,6 @@ class ProductCreateInput {
     nullable: true,
   })
   orders?: OrderCreateNestedManyWithoutProductsInput;
-
-  @ApiProperty({
-    required: false,
-    type: String,
-  })
-  @IsString()
-  @IsOptional()
-  @Field(() => String, {
-    nullable: true,
-  })
-  ofek?: string | null;
 }
 
 export { ProductCreateInput };

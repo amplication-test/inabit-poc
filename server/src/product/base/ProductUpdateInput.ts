@@ -66,17 +66,6 @@ class ProductUpdateInput {
     nullable: true,
   })
   orders?: OrderUpdateManyWithoutProductsInput;
-
-  @ApiProperty({
-    required: false,
-    type: String,
-  })
-  @IsString()
-  @IsOptional()
-  @Field(() => String, {
-    nullable: true,
-  })
-  ofek?: string | null;
 }
 
 export { ProductUpdateInput };

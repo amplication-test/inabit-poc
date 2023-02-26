@@ -88,17 +88,6 @@ class Product {
   @Type(() => Order)
   @IsOptional()
   orders?: Array<Order>;
-
-  @ApiProperty({
-    required: false,
-    type: String,
-  })
-  @IsString()
-  @IsOptional()
-  @Field(() => String, {
-    nullable: true,
-  })
-  ofek!: string | null;
 }
 
 export { Product };
