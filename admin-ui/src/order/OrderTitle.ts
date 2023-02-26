@@ -1,7 +1,7 @@
 import { Order as TOrder } from "../api/order/Order";
 
-export const ORDER_TITLE_FIELD = "ofek";
+export const ORDER_TITLE_FIELD = "id";
 
 export const OrderTitle = (record: TOrder): string => {
-  return record.ofek || String(record.id);
+  return record.id || String(record.id);
 };
