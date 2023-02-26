@@ -174,8 +174,6 @@ export class ProductControllerBase {
             id: true,
           },
         },
-
-        ofek: true,
       },
     });
     if (results === null) {

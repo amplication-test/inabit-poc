@@ -64,8 +64,6 @@ export class OrderControllerBase {
             id: true,
           },
         },
-
-        ofek: true,
       },
     });
   }
@@ -96,8 +94,6 @@ export class OrderControllerBase {
             id: true,
           },
         },
-
-        ofek: true,
       },
     });
   }
@@ -129,8 +125,6 @@ export class OrderControllerBase {
             id: true,
           },
         },
-
-        ofek: true,
       },
     });
     if (result === null) {
@@ -185,8 +179,6 @@ export class OrderControllerBase {
               id: true,
             },
           },
-
-          ofek: true,
         },
       });
     } catch (error) {
@@ -227,8 +219,6 @@ export class OrderControllerBase {
               id: true,
             },
           },
-
-          ofek: true,
         },
       });
     } catch (error) {
