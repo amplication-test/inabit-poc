@@ -1,6 +1,7 @@
 import { Customer } from "../customer/Customer";
 
 export type Address = {
+  id: number;
   createdAt: Date;
   updatedAt: Date;
   address_1: string | null;
@@ -9,5 +10,4 @@ export type Address = {
   state: string | null;
   zip: number | null;
   customers?: Array<Customer>;
-  id: number;
 };
