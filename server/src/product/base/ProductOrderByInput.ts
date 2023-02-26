@@ -71,6 +71,15 @@ class ProductOrderByInput {
     nullable: true,
   })
   description?: SortOrder;
+
+  @ApiProperty({
+    required: false,
+    enum: ["asc", "desc"],
+  })
+  @Field(() => SortOrder, {
+    nullable: true,
+  })
+  ofek?: SortOrder;
 }
 
 export { ProductOrderByInput };

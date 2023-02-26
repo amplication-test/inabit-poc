@@ -122,6 +122,12 @@
   {
     "role": "user",
     "resource": "Product",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Product",
     "action": "create:any",
     "attributes": "*"
   },
@@ -129,12 +135,6 @@
     "role": "user",
     "resource": "Product",
     "action": "update:any",
-    "attributes": "*"
-  },
-  {
-    "role": "user",
-    "resource": "Product",
-    "action": "read:own",
     "attributes": "*"
   },
   {
