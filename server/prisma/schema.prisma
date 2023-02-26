@@ -26,13 +26,14 @@ model Order {
   discount   Float?
   totalPrice Int?
   customer   Customer? @relation(fields: [customerId], references: [id])
-  customerId String?
+  customerId Int?
   product    Product?  @relation(fields: [productId], references: [id])
   productId  String?
+  ofek       String?
 }
 
 model Customer {
-  id        String   @id @default(cuid())
+  id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   firstName String?
@@ -45,7 +46,6 @@ model Customer {
 }
 
 model Address {
-  id        Int        @id @default(autoincrement())
   createdAt DateTime   @default(now())
   updatedAt DateTime   @updatedAt
   address_1 String?
@@ -54,6 +54,7 @@ model Address {
   state     String?
   zip       Int?
   customers Customer[]
+  id        Int        @id @default(autoincrement())
 }
 
 model Product {
