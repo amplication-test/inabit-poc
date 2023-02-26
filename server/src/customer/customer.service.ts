@@ -7,4 +7,8 @@ export class CustomerService extends CustomerServiceBase {
   constructor(protected readonly prisma: PrismaService) {
     super(prisma);
   }
+
+  customFunction() {
+    return "Hello World";
+  }
 }

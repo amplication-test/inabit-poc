@@ -4,8 +4,8 @@ import {
   Show,
   SimpleShowLayout,
   ShowProps,
-  DateField,
   TextField,
+  DateField,
   ReferenceManyField,
   Datagrid,
   ReferenceField,
@@ -17,6 +17,7 @@ export const AddressShow = (props: ShowProps): React.ReactElement => {
   return (
     <Show {...props}>
       <SimpleShowLayout>
+        <TextField label="ID" source="id" />
         <DateField source="createdAt" label="Created At" />
         <DateField source="updatedAt" label="Updated At" />
         <TextField label="Address 1" source="address_1" />
@@ -24,7 +25,6 @@ export const AddressShow = (props: ShowProps): React.ReactElement => {
         <TextField label="City" source="city" />
         <TextField label="State" source="state" />
         <TextField label="Zip" source="zip" />
-        <TextField label="ID" source="id" />
         <ReferenceManyField
           reference="Customer"
           target="AddressId"
