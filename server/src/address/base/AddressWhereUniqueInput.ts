@@ -24,4 +24,4 @@ class AddressWhereUniqueInput {
   id!: number;
 }
 
-export { AddressWhereUniqueInput };
+export { AddressWhereUniqueInput as AddressWhereUniqueInput };
