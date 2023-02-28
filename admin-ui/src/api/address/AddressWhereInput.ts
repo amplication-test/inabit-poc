@@ -1,14 +1,14 @@
 import { StringNullableFilter } from "../../util/StringNullableFilter";
-import { IntNullableFilter } from "../../util/IntNullableFilter";
 import { CustomerListRelationFilter } from "../customer/CustomerListRelationFilter";
-import { IntFilter } from "../../util/IntFilter";
+import { StringFilter } from "../../util/StringFilter";
+import { IntNullableFilter } from "../../util/IntNullableFilter";
 
 export type AddressWhereInput = {
   address_1?: StringNullableFilter;
   address_2?: StringNullableFilter;
   city?: StringNullableFilter;
+  customers?: CustomerListRelationFilter;
+  id?: StringFilter;
   state?: StringNullableFilter;
   zip?: IntNullableFilter;
-  customers?: CustomerListRelationFilter;
-  id?: IntFilter;
 };
