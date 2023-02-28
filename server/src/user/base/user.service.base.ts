@@ -39,32 +39,12 @@ export class UserServiceBase {
   async create<T extends Prisma.UserCreateArgs>(
     args: Prisma.SelectSubset<T, Prisma.UserCreateArgs>
   ): Promise<User> {
-    return this.prisma.user.create<T>({
-      ...args,
-
-      data: {
-        ...args.data,
-        password: await this.passwordService.hash(args.data.password),
-      },
-    });
+    return this.prisma.user.create<T>(args);
   }
   async update<T extends Prisma.UserUpdateArgs>(
     args: Prisma.SelectSubset<T, Prisma.UserUpdateArgs>
   ): Promise<User> {
-    return this.prisma.user.update<T>({
-      ...args,
-
-      data: {
-        ...args.data,
-
-        password:
-          args.data.password &&
-          (await transformStringFieldUpdateInput(
-            args.data.password,
-            (password) => this.passwordService.hash(password)
-          )),
-      },
-    });
+    return this.prisma.user.update<T>(args);
   }
   async delete<T extends Prisma.UserDeleteArgs>(
     args: Prisma.SelectSubset<T, Prisma.UserDeleteArgs>
