@@ -1,7 +1,6 @@
 import { SortOrder } from "../../util/SortOrder";
 
 export type AddressOrderByInput = {
-  id?: SortOrder;
   createdAt?: SortOrder;
   updatedAt?: SortOrder;
   address_1?: SortOrder;
@@ -9,4 +8,5 @@ export type AddressOrderByInput = {
   city?: SortOrder;
   state?: SortOrder;
   zip?: SortOrder;
+  id?: SortOrder;
 };
